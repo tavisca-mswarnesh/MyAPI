@@ -23,13 +23,6 @@ pipeline {
         }
 	
     }
-    post {
-        success{
-	   archiveArtifacts artifacts: '**', fingerprint: true
-	   sh 'dotnet MyAPI/bin/Debug/netcoreapp2.2/MyAPI.dll'
-		
-            
-        }
-    }
+    
 	
 }
