@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build MyAPI.sln'
+                bat 'dotnet build MyAPI.sln'
                 echo "Building......."
             }
         }
