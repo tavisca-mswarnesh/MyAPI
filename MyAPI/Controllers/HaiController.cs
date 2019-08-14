@@ -12,9 +12,9 @@ namespace MyAPI.Controllers
     public class HaiController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public string Get()
         {
-            return new string[] { "Hello" };
+            return "Hello" ;
         }
     }
 }
