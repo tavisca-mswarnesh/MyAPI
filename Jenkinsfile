@@ -5,19 +5,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build MyAPI.sln -p:configuration=release -v:n'
+                bat 'dotnet build MyAPI.sln -p:configuration=release -v:n'
                 echo "Building......."
             }
         }
 	stage('Test') {
             steps {
-                sh 'dotnet test'
+                bat 'dotnet test'
                 echo "Testing.........."
             }
         }
 	stage('Publish') {
             steps {
-                sh 'dotnet publish'
+                bat 'dotnet publish'
                 echo "Testing.........."
             }
         }
@@ -26,10 +26,7 @@ pipeline {
     post {
         success{
 	   archiveArtifacts artifacts: '**', fingerprint: true
-	   sh 'dotnet MyAPI/bin/Debug/netcoreapp2.2/MyAPI.dll'
-		
-            
-        }
+	   bat 'dotnet MyAPI/bin/Debug/netcoreapp2.2/MyAPI.dll'
+	}
     }
-	
 }
