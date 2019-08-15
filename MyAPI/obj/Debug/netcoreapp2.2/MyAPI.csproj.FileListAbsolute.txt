@@ -1,0 +1,14 @@
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.deps.json
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.runtimeconfig.json
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.runtimeconfig.dev.json
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.dll
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\bin\Debug\netcoreapp2.2\MyAPI.pdb
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.csproj.CoreCompileInputs.cache
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorAssemblyInfo.cache
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorAssemblyInfo.cs
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.AssemblyInfoInputs.cache
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.AssemblyInfo.cs
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.RazorTargetAssemblyInfo.cache
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.dll
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.pdb
+C:\Users\vmattapalli\source\repos\MyAPI\MyAPI\obj\Debug\netcoreapp2.2\MyAPI.csprojAssemblyReference.cache
