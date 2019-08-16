@@ -38,7 +38,7 @@ pipeline {
     post {
         success{
 	   
-	   powershell(script: 'docker FROM microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803 AS base')
+	   powershell(script: 'FROM microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803 AS base')
 	}
     }
 }
