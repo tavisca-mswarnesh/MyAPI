@@ -30,7 +30,7 @@ pipeline {
     post {
         success{
 	   archiveArtifacts artifacts: '**', fingerprint: true
-	   bat 'dotnet MyAPI/bin/Debug/netcoreapp2.2/MyAPI.dll'
+	   
 	}
     }
 }
