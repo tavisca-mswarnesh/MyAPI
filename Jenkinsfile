@@ -1,11 +1,13 @@
 
 pipeline {
-    agent any
+	agent any 
+	parameters{
+		string(name:'SOLUTION_PATH')
 
     stages {
         stage('Build') {
             steps {
-                bat 'dotnet build MyAPI.sln -p:configuration=release -v:n'
+		    bat 'dotnet build ${params.SOLUTION_PATH} -p:configuration=release -v:n'
                 echo "Building......."
             }
         }
