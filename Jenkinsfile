@@ -3,7 +3,7 @@ pipeline {
 	agent any 
 	
 	
-	parameters{string(name: 'BUILD_PATH',default: 'MyAPI.sol',description:'testing' ,)}
+	parameters{string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'testing' ,)}
 
 	
     stages {
