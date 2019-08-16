@@ -2,11 +2,9 @@
 pipeline {
 	agent any 
 	
-	options([
-  parameters([
-    string(name: 'BUILD_PATH', )
-   ])
-])
+	
+  parameters([string(name: 'BUILD_PATH', )])
+
 	
     stages {
         stage('Build') {
