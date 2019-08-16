@@ -39,7 +39,7 @@ pipeline {
         success{
 	   
 	   
-            powershell(script: 'docker build -t image123 .')
+            powershell(script: 'docker build -t image123 ./MyAPI')
 	}
     }
 }
