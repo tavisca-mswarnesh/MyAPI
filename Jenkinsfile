@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		    bat 'dotnet build %BUILD_PATH%'
+		    bat 'dotnet build '
                 echo "Building......."
             }
         }
