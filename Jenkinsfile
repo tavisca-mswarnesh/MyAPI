@@ -2,10 +2,16 @@
 pipeline {
 	agent any 
 	
+	properties([
+  parameters([
+    string(name: 'BUILD_PATH', )
+   ])
+])
+	
     stages {
         stage('Build') {
             steps {
-		    bat 'dotnet build MyAPI.sln -p:configuration=release -v:n'
+		    bat 'dotnet build ${params.BUILD_PATH} -p:configuration=release -v:n'
                 echo "Building......."
             }
         }
