@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		    powershell(script: 'dotnet build ')
+		    powershell(script: 'dotnet build ${env:BUILD_PATH}.sln')
             powershell(script: "echo Building........")
             }
         }
@@ -30,7 +30,7 @@ pipeline {
         }
         stage('zip'){
             steps{
-                archiveArtifacts artifacts: 'MyAPI/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true
+                archiveArtifacts artifacts: '${env:BUILD_PATH}/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true
             }
         }
         stage('Build Docker')
