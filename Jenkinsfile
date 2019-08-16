@@ -33,13 +33,19 @@ pipeline {
                 archiveArtifacts artifacts: 'MyAPI/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true
             }
         }
+        stage('Build Docker')
+        {
+            steps{
+                powershell(script: 'docker build -t $IMAGE_NAME ./MyAPI')
+            }
+        }
 	
     }
     post {
         success{
 	   
 	   
-            powershell(script: 'docker build -t image123 ./MyAPI')
-	}
+            
+	
     }
 }
