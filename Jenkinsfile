@@ -12,20 +12,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		    poweshell(script: 'dotnet build ')
-            poweshell(echo "Building........")
+		    powershell(script: 'dotnet build ')
+            powershell(echo "Building........")
             }
         }
 	stage('Test') {
             steps {
-                poweshell(script: 'dotnet test')
-                poweshell(echo "Testing.......")
+                powershell(script: 'dotnet test')
+                powershell(echo "Testing.......")
             }
         }
 	stage('Publish') {
             steps {
-                poweshell(script: 'dotnet publish')
-                poweshell(echo "Testing..........")
+                powershell(script: 'dotnet publish')
+                powershell(echo "Testing..........")
             }
         }
 	
@@ -33,7 +33,7 @@ pipeline {
     post {
         success{
 	   archiveArtifacts artifacts: '**', fingerprint: true
-	   poweshell(script: 'docker run -p 7100:80 %IMAGE_NAME% .')
+	   powershell(script: 'docker run -p 7100:80 %IMAGE_NAME% .')
 	}
     }
 }
