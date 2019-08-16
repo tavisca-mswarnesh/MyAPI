@@ -32,7 +32,7 @@ pipeline {
     }
     post {
         success{
-	   archiveArtifacts artifacts: './bin/Debug/netcoreapp2.2/publish/*', fingerprint: true
+	   archiveArtifacts artifacts: './MyAPI/bin/Debug/netcoreapp2.2/publish/*', fingerprint: true
 	
 	}
     }
