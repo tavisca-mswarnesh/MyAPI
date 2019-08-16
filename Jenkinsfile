@@ -3,13 +3,13 @@ pipeline {
 	agent any 
 	
 	
-	parameters{string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'testing' ,)}
+	parameters{string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'testing')}
 
 	
     stages {
         stage('Build') {
             steps {
-		    bat 'dotnet build ${params.BUILD_PATH} -p:configuration=release -v:n'
+		    bat 'dotnet build %params.BUILD_PATH% -p:configuration=release -v:n'
                 echo "Building......."
             }
         }
