@@ -28,12 +28,17 @@ pipeline {
                 powershell(script: "echo Testing..........")
             }
         }
+        stage('zip'){
+            steps{
+                archiveArtifacts artifacts: 'MyAPI/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true
+            }
+        }
 	
     }
     post {
         success{
-	   archiveArtifacts artifacts: 'MyAPI/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true
-	
+	   
+	   powershell(script: FROM microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803 AS base)
 	}
     }
 }
