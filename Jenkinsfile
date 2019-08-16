@@ -30,7 +30,7 @@ pipeline {
         }
         stage('zip'){
             steps{
-                powershell(script: archiveArtifacts artifacts: '${env:BUILD_PATH}/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true)
+                powershell(script: "archiveArtifacts artifacts: '${env:BUILD_PATH}/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true")
             }
         }
         stage('Build Docker')
