@@ -30,7 +30,7 @@ pipeline {
     post {
         success{
 	   archiveArtifacts artifacts: '**', fingerprint: true
-	   
+	   bat 'docker run -p 5000:80 myapiimage .
 	}
     }
 }
