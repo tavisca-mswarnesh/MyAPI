@@ -3,6 +3,7 @@ pipeline {
 	agent any 
 	parameters{
 		string(name:'SOLUTION_PATH')
+	}
 
     stages {
         stage('Build') {
