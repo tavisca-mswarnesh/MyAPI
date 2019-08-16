@@ -13,19 +13,19 @@ pipeline {
         stage('Build') {
             steps {
 		    powershell(script: 'dotnet build ')
-            powershell(script: echo "Building........")
+            powershell(script: "echo Building........")
             }
         }
 	stage('Test') {
             steps {
                 powershell(script: 'dotnet test')
-                powershell(script: echo "Testing.......")
+                powershell(script: "echo Testing.......")
             }
         }
 	stage('Publish') {
             steps {
                 powershell(script: 'dotnet publish')
-                powershell(script: echo "Testing..........")
+                powershell(script: "echo Testing..........")
             }
         }
 	
