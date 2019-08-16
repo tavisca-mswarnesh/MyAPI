@@ -32,8 +32,8 @@ pipeline {
     }
     post {
         success{
-	   archiveArtifacts artifacts: '**', fingerprint: true
-	   powershell(script: 'docker run -p 7100:80 $IMAGE_NAME .')
+	   archiveArtifacts artifacts: './bin/Debug/netcoreapp2.2/publish/*', fingerprint: true
+	
 	}
     }
 }
