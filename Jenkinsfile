@@ -33,7 +33,7 @@ pipeline {
     post {
         success{
 	   archiveArtifacts artifacts: '**', fingerprint: true
-	   powershell(script: 'docker run -p 7100:80 %IMAGE_NAME% .')
+	   powershell(script: 'docker run -p 7100:80 $IMAGE_NAME .')
 	}
     }
 }
