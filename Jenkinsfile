@@ -36,7 +36,7 @@ pipeline {
         stage('Build Docker')
         {
             steps{
-                powershell(script: 'docker build -t $IMAGE_NAME ./MyAPI')
+                powershell(script: 'docker build -t ${env:IMAGE_NAME} ./MyAPI')
             }
         }
 	
