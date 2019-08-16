@@ -2,7 +2,7 @@
 pipeline {
 	agent any 
 	
-	properties([
+	options([
   parameters([
     string(name: 'BUILD_PATH', )
    ])
