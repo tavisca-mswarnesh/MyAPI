@@ -27,13 +27,13 @@ pipeline {
         }
 	stage('Publish') {
             steps {
-                powershell(script: 'dotnet publish')
+                powershell(script: 'dotnet publish -c Release -o ../publish')
                 powershell(script: "echo Testing..........")
             }
         }
         stage('zip'){
             steps{
-                powershell(script: "archiveArtifacts artifacts: '${env:BUILD_PATH}/bin/Debug/netcoreapp2.2/publish/*.*', fingerprint: true")
+                archiveArtifacts artifacts: 'publish/*.*, fingerprint: true'
             }
         }
         stage('Build Docker')
