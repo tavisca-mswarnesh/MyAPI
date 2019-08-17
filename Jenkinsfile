@@ -7,7 +7,7 @@ pipeline {
 		string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'enter solution name')
 		string(name: 'IMAGE_NAME',defaultValue: 'myapiimage',description:'enter image name')
         string(name: 'USER_NAME',defaultValue: 'Enter dockerhub user name',description:'Enter dockerhub user name')
-        password(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
+        string(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
         string(name: 'TAG_NAME',defaultValue: 'Enter tag  name',description:'Enter tag  name')
 	}
 
@@ -44,7 +44,7 @@ pipeline {
         }
         stage('Login'){
             steps{
-                powershell(script: 'docer login -u ${env:USER_NAME} -p ${env:PASSWORD}');
+                powershell(script: 'docker login -u ${env:USER_NAME} -p ${env:PASSWORD}');
             }
         }
         stage('Tagging image'){
@@ -54,7 +54,7 @@ pipeline {
         }
         stage('Pushing Image'){
             steps{
-                powershell(script: 'mattapalliswarnesh/my_api:${env:TAG_NAME}')
+                powershell(script: 'docker push mattapalliswarnesh/my_api:${env:TAG_NAME}')
             }
         }
 	
