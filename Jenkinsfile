@@ -7,7 +7,7 @@ pipeline {
 		string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'enter solution name')
 		string(name: 'IMAGE_NAME',defaultValue: 'myapiimage',description:'enter image name')
         string(name: 'USER_NAME',defaultValue: 'Enter dockerhub user name',description:'Enter dockerhub user name')
-        string(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
+        password(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
         string(name: 'TAG_NAME',defaultValue: 'Enter tag  name',description:'Enter tag  name')
 	}
 
