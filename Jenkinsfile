@@ -33,7 +33,7 @@ pipeline {
         }
         stage('zip'){
             steps{
-                archiveArtifacts artifacts: 'publish/*.*, fingerprint: true'
+                archiveArtifacts artifacts: 'publish/*.*', fingerprint: true
             }
         }
         stage('Build Docker')
