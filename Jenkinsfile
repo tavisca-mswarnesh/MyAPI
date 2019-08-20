@@ -4,18 +4,20 @@ pipeline {
 	
 	
 	parameters{
-		string(name: 'BUILD_PATH',defaultValue: 'MyAPI.sol',description:'enter solution name')
+		string(name: 'SOL_NAME',defaultValue: 'MyAPI',description:'enter solution name')
 		string(name: 'IMAGE_NAME',defaultValue: 'myapiimage',description:'enter image name')
-        string(name: 'USER_NAME',defaultValue: 'Enter dockerhub user name',description:'Enter dockerhub user name')
-        password(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
-        string(name: 'TAG_NAME',defaultValue: 'Enter tag  name',description:'Enter tag  name')
+        	string(name: 'USER_NAME',defaultValue: 'Enter dockerhub user name',description:'Enter dockerhub user name')
+        	password(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
+        	string(name: 'TAG_NAME',defaultValue: 'Enter tag  name',description:'Enter tag  name')
+        	string(name: 'REPOSITORY_NAME',defaultValue: 'Enter dockerhub repository name',description:'Enter dockerhub repository name')
+		string(name: 'PORT',defaultValue: 'Enter port  number',description:'Enter port  number')
 	}
 
 	
     stages {
         stage('Build') {
             steps {
-		    powershell(script: 'dotnet build ${env:BUILD_PATH}.sln')
+		    powershell(script: 'dotnet build ${env:SOL_NAME}.sln')
             powershell(script: "echo Building........")
             }
         }
@@ -28,7 +30,7 @@ pipeline {
    /* stage('SonarQube analysis') {
         steps{
                 powershell(script: 'dotnet C:/Users/vmattapalli/Downloads/sonar-scanner-msbuild-4.6.2.2108-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"Testing"')
-                powershell(script: 'dotnet build ${env:BUILD_PATH}.sln')
+                powershell(script: 'dotnet build ${env:SOL_NAME}.sln')
                 powershell(script: 'dotnet C:/Users/vmattapalli/Downloads/sonar-scanner-msbuild-4.6.2.2108-netcoreapp2.0/SonarScanner.MSBuild.dll end')
         }
     }*/
