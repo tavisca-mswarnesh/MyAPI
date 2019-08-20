@@ -66,6 +66,18 @@ pipeline {
                 powershell(script: 'docker push mattapalliswarnesh/my_api:${env:TAG_NAME}')
             }
         }
+	stage('Pull') {
+            steps {
+		    powershell(script: 'docker pull ${env:USER_NAME}/${env:REPOSITORY_NAME}:${env:TAG_NAME}')
+            	     powershell(script: "echo pulling........")
+            }
+        }
+	stage('Run') {
+            steps {
+                powershell(script: 'docker run -p ${env:PORT}:80 ${env:USER_NAME}/${env:REPOSITORY_NAME}:${env:TAG_NAME}')
+                powershell(script: "echo Running.......")
+            }
+        }    
 	
     }
     
