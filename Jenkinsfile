@@ -25,13 +25,13 @@ pipeline {
                 powershell(script: "echo Testing.......")
             }
         }
-    stage('SonarQube analysis') {
+   /* stage('SonarQube analysis') {
         steps{
                 powershell(script: 'dotnet C:/Users/vmattapalli/Downloads/sonar-scanner-msbuild-4.6.2.2108-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"Testing"')
                 powershell(script: 'dotnet build ${env:BUILD_PATH}.sln')
                 powershell(script: 'dotnet C:/Users/vmattapalli/Downloads/sonar-scanner-msbuild-4.6.2.2108-netcoreapp2.0/SonarScanner.MSBuild.dll end')
         }
-    }
+    }*/
 	stage('Publish') {
             steps {
                 powershell(script: 'dotnet publish -c Release -o ../publish')
