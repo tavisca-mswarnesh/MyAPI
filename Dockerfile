@@ -1,2 +1,4 @@
 FROM microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803 AS base
-COPY ./bin/Debug/netcoreapp2.2/publish .
+COPY ./publish .
+ARG SOLUTION_NAME = "Default"
+ENTRYPOINT ["dotnet", "${SOLUTION_NAME}.dll"]
