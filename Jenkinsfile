@@ -4,13 +4,13 @@ pipeline {
 	
 	
 	parameters{
-		string(name: 'SOL_NAME',defaultValue: 'MyAPI',description:'enter solution name')
+		string(name: 'SOL_NAME',defaultValue: 'MyAPI',description:'MyAPI')
 		string(name: 'IMAGE_NAME',defaultValue: 'myapiimage',description:'enter image name')
-        	string(name: 'USER_NAME',defaultValue: 'Enter dockerhub user name',description:'Enter dockerhub user name')
-        	password(name: 'PASSWORD',defaultValue: 'enter dockerhub Password',description:'enter dockerhub Password')
-        	string(name: 'TAG_NAME',defaultValue: 'Enter tag  name',description:'Enter tag  name')
-        	string(name: 'REPOSITORY_NAME',defaultValue: 'Enter dockerhub repository name',description:'Enter dockerhub repository name')
-		string(name: 'PORT',defaultValue: 'Enter port  number',description:'Enter port  number')
+        	string(name: 'USER_NAME',defaultValue: 'mattapalliswarnesh',description:'Enter dockerhub user name')
+        	password(name: 'PASSWORD',defaultValue: 'Swadhan@9702',description:'enter dockerhub Password')
+        	string(name: 'TAG_NAME',defaultValue: 'Tag4',description:'Enter tag  name')
+        	string(name: 'REPOSITORY_NAME',defaultValue: 'my_api',description:'Enter dockerhub repository name')
+		string(name: 'PORT',defaultValue: '1234',description:'Enter port  number')
 	}
 
 	
