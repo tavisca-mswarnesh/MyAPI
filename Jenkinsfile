@@ -58,12 +58,12 @@ pipeline {
         }
         stage('Tagging image'){
             steps{
-                powershell(script: 'docker tag ${env:IMAGE_NAME}:latest ${env:USER_NAME}/my_api:${env:TAG_NAME}')
+                powershell(script: 'docker tag ${env:IMAGE_NAME}:latest ${env:USER_NAME}/${env:REPOSITORY_NAME}:${env:TAG_NAME}')
             }
         }
         stage('Pushing Image'){
             steps{
-                powershell(script: 'docker push ${env:USER_NAME}/my_api:${env:TAG_NAME}')
+                powershell(script: 'docker push ${env:USER_NAME}/${env:REPOSITORY_NAME}:${env:TAG_NAME}')
             }
         }
 	stage('Pull') {
